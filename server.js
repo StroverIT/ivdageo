@@ -20,7 +20,7 @@ app.use(express.static(__dirname + "/public"))
 db.on("error", (error)=> console.log(error))
 db.once("open", ()=> console.log("Connected to Mongoose"))
 
-mongoose.connect("mongodb://localhost:27017/ivdageo",{
+mongoose.connect(process.env.MONGO_HOST,{
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
