@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "devStart": "nodemon server.js",
+    
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "copy": "npm-run-all --parallel copy:*",
