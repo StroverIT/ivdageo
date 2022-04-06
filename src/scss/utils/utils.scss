@@ -1,0 +1,29 @@
+@use "../components/breakpoints" as breakpoints;
+
+.d-none{
+    display:none !important;
+}
+.d-block{
+    display:block !important;
+}
+.d-flex{
+    display: flex !important;
+}
+
+@each $key, $value in breakpoints.$breakpoints{
+    .d-#{$key}-none{
+        @media (min-width: $value){
+            display: none !important;
+        }
+    }
+    .d-#{$key}-block{
+        @media (min-width: $value){
+            display: block !important;
+        }
+    }
+    .d-#{$key}-flex{
+        @media (min-width: $value){
+            display: flex !important;
+        }
+    }
+}

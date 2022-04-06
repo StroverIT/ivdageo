@@ -1,0 +1,30 @@
+@use "../abstracts/colors" as *;
+@use "../components/breakpoints" as *;
+
+$f-padding: 50px;
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: $primary-color;
+  color: $white-color;
+
+  &__container {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch center;
+    align-items: stretch;
+    padding-top: $f-padding;
+    padding-bottom: $f-padding;
+
+    @include sm {
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
+  &__title {
+    font-size: 1.5em;
+  }
+}

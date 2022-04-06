@@ -1,5 +1,260 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-  background-color: blue;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.header {
+  width: 100%;
+}
+.header__nav {
+  max-width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #114999;
+}
+.header__nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav .header__nav__hamburger {
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.header__nav .header__nav__hamburger div {
+  width: 25px;
+  height: 3px;
+  margin: 2px;
+  background-color: #000;
+}
+.header__nav .header__nav__hamburger div:last-child {
+  width: 15px;
+}
+.header__nav .header__navbar__logo {
+  max-width: 250px;
+}
+.header__nav .header__navbar__logo img {
+  max-width: 100%;
+}
+.header__nav .nav__search input {
+  width: 350px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.header__nav .nav__search input:focus {
+  border: red;
+}
+.header__nav .nav__search span {
+  margin-left: 10px;
+}
+.header__nav .container__icons {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid black;
+  text-align: center;
+}
+@media (min-width: 720px) {
+  .header__nav .container__icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.header__nav .container__icons > div path {
+  fill: red;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #114999;
+  color: #e5ebf1;
+}
+.footer__container {
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: stretch center;
+  align-items: stretch;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: 480px) {
+  .footer__container {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+.footer__title {
+  font-size: 1.5em;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+@media (min-width: 0) {
+  .d-xs-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 0) {
+  .d-xs-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 0) {
+  .d-xs-flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 480px) {
+  .d-sm-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 480px) {
+  .d-sm-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 480px) {
+  .d-sm-flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 720px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 720px) {
+  .d-md-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 720px) {
+  .d-md-flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .d-lg-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .d-lg-flex {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-xl-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-xl-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-xl-flex {
+    display: flex !important;
+  }
+}
+
+body {
+  background-color: #e2ecf1;
 }
 
 /*# sourceMappingURL=main.css.map */

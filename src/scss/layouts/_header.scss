@@ -1,0 +1,91 @@
+@use "../abstracts/colors" as *;
+@use "../components/breakpoints" as *;
+.header{
+	width: 100%;
+	
+	&__nav {
+		max-width: 100%;
+		padding: 5px;
+		display: flex;
+		justify-content: space-around;
+		background-color: $primary-color;
+		// background-color: coral;
+		div{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		// hamburger container
+		.header__nav__hamburger {
+			width: 30px;
+			height: 30px;
+			padding: 3px;
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			border-radius: 10px;
+			cursor: pointer;
+
+			// hambuger lines
+			div {
+				width: 25px;
+				height: 3px;
+				margin: 2px;
+				background-color:#000;
+			}
+
+			// last hamburger line
+			div:last-child {
+				width: 15px;
+			}
+		}
+		
+		// animation class
+		
+		// logo
+		.header__navbar__logo {
+			max-width: 250px;
+			// background-color: pink;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		// search
+		.nav__search {
+			input {
+				width: 350px;
+				padding: 10px;
+				outline: none;
+				border: none;
+				border-radius: 5px;
+			}
+			input:focus {
+				border: red;
+			}
+			span {
+				margin-left: 10px;
+			}
+		}
+
+		// menu icons
+		.container__icons{
+			display: grid;
+			gap: 1em;
+			grid-template-columns:  repeat(4, 1fr);
+			border: 1px solid black;
+			text-align: center;
+			@include md{
+				grid-template-columns:  repeat(2, 1fr);
+			}
+		}
+		
+		.container__icons  > div path {
+			fill: red;
+		}
+	}
+}

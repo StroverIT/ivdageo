@@ -1,5 +1,17 @@
-@use "abstracts/colors"  as colors;
 
+// ---- Abstracts ----
+@use "abstracts/colors"  as *;
+
+// ----- Base ----
+@use "base/reset" as *;
+
+// --- Components ----
+@use "components/icons" as *;
+// --- Layouts --
+@use "layouts/header" as *;
+@use "layouts/footer" as *;
+//  --- Utils ---
+@use "utils/utils" as *;
 body{
-    background-color: red;
+    background-color: $background-color;
 }  
