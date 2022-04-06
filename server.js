@@ -17,6 +17,11 @@ app.set("view engine", "ejs")
 app.set("views", __dirname + "/views")
 app.use(express.static(__dirname + "/public"))
 
+// Pages
+app.get("/", (req,res)=>{
+  res.render(path.resolve("views/index.ejs"))
+})
+
 db.on("error", (error)=> console.log(error))
 db.once("open", ()=> console.log("Connected to Mongoose"))
 
