@@ -26,4 +26,17 @@
             display: flex !important;
         }
     }
+    // This is still in test
+    .container-#{$key}-fluid{
+        @media (min-width: $value){
+            width:  min(100% - 2rem, 1600px);
+            margin-inline: auto;
+        }
+    }
+    .container-#{$key}{
+        @media (min-width: $value){
+            width:  min(100% - 2rem, 600px);
+            margin-inline: auto;
+        }
+    }
 }
