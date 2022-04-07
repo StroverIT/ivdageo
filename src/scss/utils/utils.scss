@@ -9,6 +9,14 @@
 .d-flex{
     display: flex !important;
 }
+.container-fluid{
+        width:  min(100% - 2rem, 1600px);
+        margin-inline: auto;
+}
+.container{
+        width:  min(100% - 2rem, 600px);
+        margin-inline: auto;
+}
 
 @each $key, $value in breakpoints.$breakpoints{
     .d-#{$key}-none{
