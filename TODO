@@ -6,6 +6,13 @@ Pages
 [  ] Login
 [  ] Register
 [  ] Account
+[  ] Admin Panel
+[  ] Authenticataion for user and admin 
+If(admin){
+    redirect(admin panel)
+    return
+}
+Redirect account
 
 information - https://ivdageo.com/
 
