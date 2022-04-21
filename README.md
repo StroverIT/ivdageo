@@ -1,2 +1,2 @@
 # ivdageo
-client's website
+Geri's website
