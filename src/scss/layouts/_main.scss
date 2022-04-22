@@ -1,0 +1,41 @@
+@use "../components/breakpoints" as *;
+@use "../abstracts/colors" as *;
+.main{
+   
+   &__header__info{
+    @include lg{
+        display: grid;
+        grid-template-columns: 1fr clamp(350px,1600px,75%);
+    }
+   }
+ 
+    &__navigation{
+        cursor: pointer;
+        position: relative;
+        background-color: $primary-color;
+        color: white;
+        .menu{
+            position: relative;
+            &:hover{
+                background-color: #fff;
+                color: black;
+            }
+        }
+        .submenu{
+            display: none;
+            position: absolute;
+            text-align: left;
+            z-index: 100;
+            top: 0;
+            left: 100%;
+            background-color: #fff;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.section{
+    &__top{
+        background-color: rgb(255, 254, 254, 0.7) ;
+    }
+}

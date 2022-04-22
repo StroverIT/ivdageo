@@ -7,11 +7,12 @@
 
 // --- Components ----
 @use "components/icons" as *;
+@use "components/buttons" as *;
+@use "components/grid" as *;
 // --- Layouts --
 @use "layouts/header" as *;
 @use "layouts/footer" as *;
+@use "layouts/carousel" as *;
+@use "layouts/main" as *;
 //  --- Utils ---
 @use "utils/utils" as *;
-body{
-    background-color: $background-color;
-}  

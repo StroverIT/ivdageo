@@ -1,0 +1,110 @@
+@use "../components/breakpoints" as breakpoints;
+@use "../abstracts/colors" as *;
+@use "sass:math";
+
+.d-none{
+    display:none !important;
+}
+.d-block{
+    display:block !important;
+}
+.d-flex{
+    display: flex !important;
+}
+.d-grid{
+    display: grid !important;
+}
+.row{
+    display:flex;
+    flex-flow: row wrap;
+}
+.container-fluid{
+        width:  min(100% - 2rem, 1400px);
+        margin-inline: auto;
+}
+.container{
+        width:  min(100% - 2rem, 600px);
+        margin-inline: auto;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.justify-content-center{
+    justify-content: center;
+}
+$padding-num: 5;
+
+@each $key, $value in breakpoints.$breakpoints{
+    @for $i from 1 through $padding-num{
+        @media (min-width: $value){
+            .p-#{$key}-#{$i}{
+                padding: $i * 1rem;
+            }
+        }
+        
+    }
+    @for $i from 1 through $padding-num{
+        @media (min-width: $value){
+            .b-#{$key}-#{$i}{
+                border: $i * 1rem solid $background-color;
+            }
+        }
+        
+    }
+    .d-#{$key}-none{
+        @media (min-width: $value){
+            display: none !important;
+        }
+    }
+    .d-#{$key}-block{
+        @media (min-width: $value){
+            display: block !important;
+        }
+    }
+    .d-#{$key}-flex{
+        @media (min-width: $value){
+            display: flex !important;
+        }
+    }
+    .d-#{$key}-grid{
+        @media (min-width: $value){
+            display: grid !important;
+        }
+    }
+    // This is still in test
+    .container-#{$key}-fluid{
+        @media (min-width: $value){
+            width:  min(100% - 2rem, 1600px);
+            margin-inline: auto;
+        }
+    }
+    .container-#{$key}{
+        @media (min-width: $value){
+            width:  min(100% - 2rem, 600px);
+            margin-inline: auto;
+        }
+    }
+    .flex-#{$key}-column{
+        @media (min-width: $value){
+            width:  min(100% - 2rem, 600px);
+            margin-inline: auto;
+        }
+    }
+    .flex-#{$key}-row{
+        @media (min-width: $value){
+            width:  min(100% - 2rem, 600px);
+            margin-inline: auto;
+        }
+    }
+}
+
+.list-container{
+        list-style-type: disc !important;
+        padding-left: 1rem;
+}
+.bg-color-gray{
+    background-color: $gray-color !important;
+}

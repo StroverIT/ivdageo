@@ -1,7 +1,28 @@
 @use "./breakpoints" as *;
-
+@use "../abstracts/colors" as *;
+.account__icon path {
+    // fill: rgb(13,131,206);
+    fill: $blue-color;
+}
+.hearth__icon path{
+    fill: $red-color;
+}
+.cart__icon {
+    path,circle{
+        fill: $orange-color;
+    }
+}
+.search__icon{
+    path{
+        fill: $green-color;
+    }
+}
+.full-arrow__icon{
+    z-index: 100;
+}
 .icons{
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
+

@@ -4,23 +4,24 @@
 $f-padding: 50px;
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position:sticky;
+  top: 100%;
   width: 100%;
   background: $primary-color;
   color: $white-color;
 
   &__container {
-    flex-direction: column;
-    box-sizing: border-box;
+    // flex-direction: column;
+    // box-sizing: border-box;
     display: flex;
-    place-content: stretch center;
-    align-items: stretch;
+    flex-direction: column;
+    // place-content: stretch center;
+    // align-items: stretch;
     padding-top: $f-padding;
     padding-bottom: $f-padding;
 
-    @include sm {
-      justify-content: space-around;
+    @include md {
+      justify-content: space-between;
       flex-direction: row;
     }
   }

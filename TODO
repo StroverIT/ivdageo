@@ -13,7 +13,6 @@ If(admin){
     return
 }
 Redirect account
-
 information - https://ivdageo.com/
-
+On large screen on other pages except HOME, when hamburger is clicked make to be hovorable
 On deployment - remove src folder

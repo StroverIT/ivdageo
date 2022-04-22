@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <script src="../scripts/hamburger.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("../layouts/header.ejs")%>
+
+    <main class="auth">
+
+        <div class=" container-fluid row">
+
+          <div class="login-container col-lg-6 p-md-1 b-xs-1 bg-color-gray">
+                  <form action="">
+                      <h4>Вход</h4>
+                      <bold>Аз вече съм ваш клиент</bold>
+                      <div class="form-input">
+                          <label for="email">Електронна поща *</label>
+                          <input type="text" name="email">
+                      </div>
+                      <div class="form-input">
+                          <label for="password">Парола *</label>
+                          <input type="password" name="password">
+                      </div>
+                  <button class="btn-primary d-flex justify-content-center btn-border">Вход</button>
+
+                  <a href="#">Забравена парола</a>
+                  </form>
+          </div>
+          <div class="register-container col-lg-6 p-md-1 b-xs-1 bg-color-gray">
+                  <h4>Регистрация:</h4>
+                  <b>Аз съм нов клиент:</b>
+                  <p>
+                      Ако сте нов клиент, моля регистрирайте се, за да можете да правите поръчки на наши продукти.
+                      С посочването на E-mail адрес и парола ще създадете свой личен потребителски акаунт, който освен възможността за пазаруване ще Ви осигури достъп и до допълнителни функционалности като:
+                  </p>
+                  <ul class="list-container">
+                      <li>Архив поръчки</li>
+                      <li>Персонализация</li>
+                      <li>Преглед на изпратени поръчки и проследяване на поръчки</li>
+                      <li>Запазване на кошници с покупки</li>
+                  </ul>
+                  <a href="/account/register" class="btn-primary d-flex justify-content-center btn-border">Регистрирай се</a>
+          </div>
+    </div>
+
+    </main>
+
+    <%- include("../layouts/footer.ejs")%>
+  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="../scripts/carousel.js"></script>
+  <script src="../scripts/navigation.js"></script>
+</html>
