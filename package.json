@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js",
+    "dev": "nodemon server.js",
     "sass": "npx sass --watch src/scss:public/css"
   },
   "author": "",
